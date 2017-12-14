@@ -19,31 +19,27 @@ AM_INIT_AUTOMAKE(main,1.0)
 # Checks for typedefs, structures, and compiler characteristics.
 # Checks for library functions.
 AC_OUTPUT([Makefile])
-    ```
+```
 > AC_INIT(main, 1.0, x@x.x)
 
 > AM_INIT_AUTOMAKE(main,1.0)
 
 > AC_OUTPUT([Makefile])
 
-    - \# aclocal
-    - \# autoheader
-    - \# vim Makefile.am
+- \# aclocal
+- \# autoheader
+- \# vim Makefile.am
 
-    ```
+```
     AUTOMAKE_OPTIONS=foreign
     bin_PROGRAMS=main
     main_SOURCES=main.c
-    ```
+```
 
-    - \# automake --add-missing
-    - \# ./configure
-    - \# make
-    - \# ./main 
+- \# automake --add-missing
+- \# ./configure
+- \# make
+- \# ./main 
 
 
 
-    ```
-    ```
-    ```
-    ```
