@@ -1,3 +1,6 @@
 *.c linguist-language=c
 *.h linguist-language=c
 *.sh linguist-language=c
+*.am linguist-language=c
+*.ac linguist-language=c
+*.in linguist-language=c
