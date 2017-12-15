@@ -28,6 +28,7 @@ AC_OUTPUT([Makefile])
 
 - \# aclocal
 - \# autoheader
+- \# autoconf
 - \# vim Makefile.am
 
 ```
