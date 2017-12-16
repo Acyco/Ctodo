@@ -4,5 +4,7 @@ ctodo_SOURCES= \
 			   args.c \
 			   ctodo.c \
 			   ctodo.h \
-			   mem.c
+			   files.c \
+			   mem.c \
+			   mem_exp.c
 #EXTRA_DIST= ctodo.h

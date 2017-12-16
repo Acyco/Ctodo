@@ -29,6 +29,8 @@ void do_menu (char ch);
 
 void malloc_exp(void);
 
+/* files */
+
 /* mem.c */
 
 void * Xmalloc (size_t size);
