@@ -4,18 +4,18 @@
 #include "ctodo.h"
 
 const char * program_name;
-void print_usage (FILE * stream, int exit_code)
+static void print_usage (FILE * stream, int exit_code)
 {
     fprintf (stream, "Usage: %s options [ inputfile ... ]\n", program_name);
     fprintf (stream, " -h --help .\n"
              " -o --output filename.\n"
              " -v --version.\n");
-    exit (exit_code);
 }
 
 static void printf_invalid (void)
 {
-    printf ("try '%s --help' for more information.", program_name);
+    printf ("Try '%s -h' or '%s --help'for more information.\n", program_name, program_name);
+    exit(0);
 }
 
 void get_args (int argc, char * argv[])
@@ -34,7 +34,7 @@ void get_args (int argc, char * argv[])
         { "NULL", 0, NULL, 0 },
     };
     const char * output_filename = NULL;
-    const char * m_params = NULL;
+    const char * exp_name = NULL;
     program_name = argv[0];
     do
     {
@@ -46,12 +46,12 @@ void get_args (int argc, char * argv[])
             break;
         case 'o':
             output_filename = optarg;
-            printf ("mem  %s\n", output_filename);
-            //execl ("/bin/cat", "cat", output_filename, NULL);
+            execl ("/bin/cat", "cat", output_filename, NULL);
             break;
         case 'm':
-            m_params = optarg;
-            printf ("mem  %s\n", m_params);
+            exp_name = optarg;
+
+            //mem_exp_exec(exp_name);
             break;
         case 'v':
             printf ("the version is v1.0\n");
@@ -62,10 +62,10 @@ void get_args (int argc, char * argv[])
             printf_invalid ();
             break;
         default:
-            printf ("default\n");
+            print_usage (stdout, 1);
+            printf_invalid ();
             break;
         }
     }while (next_option !=-1);
 
-    _p("get args\n");
 }

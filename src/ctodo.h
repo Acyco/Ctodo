@@ -14,6 +14,8 @@
 
 
 
+/* mem_exp enum */
+
 
 
 
@@ -27,7 +29,7 @@ void pnt_memu (void);//printf menu;
 void choice_menu (void);
 void do_menu (char ch);
 
-void malloc_exp(void);
+void malloc_exp2(void);
 
 /* files */
 
@@ -35,6 +37,9 @@ void malloc_exp(void);
 
 void * Xmalloc (size_t size);
 void  Xfree (void * p);
+
+/* mem_exp.c */
+void mem_exp_exec (const char * exp_name);
 
 #endif
 

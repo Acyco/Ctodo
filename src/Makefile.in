@@ -99,7 +99,8 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_ctodo_OBJECTS = args.$(OBJEXT) ctodo.$(OBJEXT) mem.$(OBJEXT)
+am_ctodo_OBJECTS = args.$(OBJEXT) ctodo.$(OBJEXT) files.$(OBJEXT) \
+	mem.$(OBJEXT) mem_exp.$(OBJEXT)
 ctodo_OBJECTS = $(am_ctodo_OBJECTS)
 ctodo_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
@@ -250,7 +251,9 @@ ctodo_SOURCES = \
 			   args.c \
 			   ctodo.c \
 			   ctodo.h \
-			   mem.c
+			   files.c \
+			   mem.c \
+			   mem_exp.c
 
 all: all-am
 
@@ -340,7 +343,9 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/args.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ctodo.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/files.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mem.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/mem_exp.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

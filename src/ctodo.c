@@ -26,14 +26,14 @@ void do_menu (char ch)
     {
     case 'a':
         _p("内存 malloc 例子\n");
-        malloc_exp ();
+        malloc_exp2 ();
         break;
     default:
         break;
     }
 }
 
-void malloc_exp (void)
+void malloc_exp2 (void)
 {
     int n = 5;
     int i;
