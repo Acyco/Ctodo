@@ -99,7 +99,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_ctodo_OBJECTS = ctodo.$(OBJEXT) mem.$(OBJEXT)
+am_ctodo_OBJECTS = args.$(OBJEXT) ctodo.$(OBJEXT) mem.$(OBJEXT)
 ctodo_OBJECTS = $(am_ctodo_OBJECTS)
 ctodo_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
@@ -247,9 +247,10 @@ top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
 ctodo_SOURCES = \
+			   args.c \
 			   ctodo.c \
-			   mem.c \
-			   ctodo.h
+			   ctodo.h \
+			   mem.c
 
 all: all-am
 
@@ -337,6 +338,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+include ./$(DEPDIR)/args.Po
 include ./$(DEPDIR)/ctodo.Po
 include ./$(DEPDIR)/mem.Po
 

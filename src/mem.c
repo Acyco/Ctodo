@@ -17,3 +17,8 @@ void * Xmalloc (size_t size)
     }
     return p;
 }
+
+void Xfree (void * p)
+{
+    free (p);
+}

@@ -1,7 +1,8 @@
 
 bin_PROGRAMS=ctodo
 ctodo_SOURCES= \
+			   args.c \
 			   ctodo.c \
-			   mem.c \
-			   ctodo.h
+			   ctodo.h \
+			   mem.c
 #EXTRA_DIST= ctodo.h
