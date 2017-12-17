@@ -50,8 +50,7 @@ void get_args (int argc, char * argv[])
             break;
         case 'm':
             exp_name = optarg;
-
-            //mem_exp_exec(exp_name);
+            mem_exp_exec(exp_name);
             break;
         case 'v':
             printf ("the version is v1.0\n");

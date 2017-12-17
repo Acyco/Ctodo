@@ -23,7 +23,9 @@ static void malloc_exp (void)
 
 void mem_exp_exec(const char * exp_name)
 {
-
+    if (exp_name == "malloc")
+        malloc_exp();
+    exit;
 }
 
 
